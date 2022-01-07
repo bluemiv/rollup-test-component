@@ -7,9 +7,13 @@
   "author": "taehongkim <public.bluemiv@gmail.com>",
   "license": "MIT",
   "private": false,
+  "files": [
+    "dist"
+  ],
   "scripts": {
     "build": "rollup -c rollup.config.js",
-    "watch": "rollup -cw rollup.config.js"
+    "watch": "rollup -cw rollup.config.js",
+    "prepublish": "rm -rf dist && yarn build"
   },
   "devDependencies": {
     "@babel/core": "^7.16.7",
